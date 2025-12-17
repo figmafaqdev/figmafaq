@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "step": [
+    {% for step in steps %}
+    {
+      "@type": "HowToStep",
+      "text": "{{ step }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

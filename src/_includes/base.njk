@@ -3,6 +3,17 @@
 <head>
   <meta charset="utf-8">
   {% include "head.njk" %}
+  
+{% if schema == "faq" %}
+  {% include "schema-faq.njk" %}
+{% endif %}
+
+{% if schema == "howto" %}
+  {% include "schema-howto.njk" %}
+{% endif %}
+
+
+
 </head>
 <body>
   <main>
